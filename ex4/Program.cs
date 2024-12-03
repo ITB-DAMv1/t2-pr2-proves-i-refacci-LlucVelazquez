@@ -19,19 +19,15 @@ class Program
         Console.WriteLine(HeightRectangle);
         height = Convert.ToDouble(Console.ReadLine());
 
-        // Calcula l'àrea
         area = CalcAreaRectangle(width, height);
         Console.WriteLine(AreaRectangle + area);
 
-        // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
         Console.WriteLine(RadiusRectangle);
         radius = Convert.ToDouble(Console.ReadLine());
+
         circumference = CalcCircumferenceRect(radius);
         Console.WriteLine(CircumferenceRectangle + circumference);
-
-        // Imprimeix un missatge basat en el valor de l'àrea
         WriteAreaValor(area);
-        
     }
     public static double CalcAreaRectangle(double width, double height)
     {
