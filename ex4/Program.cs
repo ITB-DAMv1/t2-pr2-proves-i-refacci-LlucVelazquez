@@ -9,26 +9,44 @@ class Program
         const string AreaRectangle = "L'àrea del rectangle és: ";
         const string RadiusRectangle = "Introdueix el radi del cercle:";
         const string CircumferenceRectangle = "La circumferència del cercle és: ";
-        const string AreaHigh = "L'àrea és més gran de 50";
-        const string AreaMedium = "L'àrea és entre 20 i 50";
-        const string AreaLow = "L'àrea és menor o igual a 20";
         Console.WriteLine(WidthRectangle);
         double width = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine(HeightRectangle);
         double height = Convert.ToDouble(Console.ReadLine());
 
         // Calcula l'àrea
-        double area = width * height;
+        double area = 0;
+        area = CalcAreaRectangle(width, height);
         Console.WriteLine(AreaRectangle + area);
 
         // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
         Console.WriteLine(RadiusRectangle);
-        double radius = Convert.ToDouble(Console.ReadLine());
-        double circumference = 2 * Math.PI * radius;
-
+        double radius = 0;
+        radius = Convert.ToDouble(Console.ReadLine());
+        double circumference = 0;
+        circumference = CalcCircumferenceRect(radius);
         Console.WriteLine(CircumferenceRectangle + circumference);
 
         // Imprimeix un missatge basat en el valor de l'àrea
+        WriteAreaValor(area);
+        
+    }
+    public static double CalcAreaRectangle(double width, double height)
+    {
+        double area = 0;
+        area = width * height;
+        return area;
+    }
+    public static double CalcCircumferenceRect(double radius)
+    {
+        double circumference = 2 * Math.PI * radius;
+        return circumference;
+    }
+    public static void WriteAreaValor(double area)
+    {
+        const string AreaHigh = "L'àrea és més gran de 50";
+        const string AreaMedium = "L'àrea és entre 20 i 50";
+        const string AreaLow = "L'àrea és menor o igual a 20";
         if (area > 50)
         {
             Console.WriteLine(AreaHigh);
