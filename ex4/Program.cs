@@ -9,21 +9,23 @@ class Program
         const string AreaRectangle = "L'àrea del rectangle és: ";
         const string RadiusRectangle = "Introdueix el radi del cercle:";
         const string CircumferenceRectangle = "La circumferència del cercle és: ";
+        double circumference = 0;
+        double radius = 0;
+        double area = 0;
+        double width = 0;
+        double height = 0;
         Console.WriteLine(WidthRectangle);
-        double width = Convert.ToDouble(Console.ReadLine());
+        width = Convert.ToDouble(Console.ReadLine());
         Console.WriteLine(HeightRectangle);
-        double height = Convert.ToDouble(Console.ReadLine());
+        height = Convert.ToDouble(Console.ReadLine());
 
         // Calcula l'àrea
-        double area = 0;
         area = CalcAreaRectangle(width, height);
         Console.WriteLine(AreaRectangle + area);
 
         // Sol·licita l'entrada de l'usuari per calcular la circumferència d'un cercle
         Console.WriteLine(RadiusRectangle);
-        double radius = 0;
         radius = Convert.ToDouble(Console.ReadLine());
-        double circumference = 0;
         circumference = CalcCircumferenceRect(radius);
         Console.WriteLine(CircumferenceRectangle + circumference);
 
